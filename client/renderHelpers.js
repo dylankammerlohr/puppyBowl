@@ -69,11 +69,23 @@ export const renderAllPlayers = (playerList) => {
 };
 
 export const renderSinglePlayer = (playerObj) => {
+  console.log(playerObj);
   if (!playerObj || !playerObj.id) {
 
     playerContainer.innerHTML = `${playerObj}`;
     return;
   }
+  let teammates = ''
+  if (playerObj.team !== null) {
+    for(let i = 0; i < playerObj.team.players.length; i++) {
+      if (playerObj.name !== playerObj.team.players[i].name) {
+        teammates = teammates + `<p>${playerObj.team.players[i].name}</p>`
+      }
+    
+    }
+  }
+  
+
 
   let pupHTML =`
     <div class="single-player-view">
@@ -82,18 +94,58 @@ export const renderSinglePlayer = (playerObj) => {
         <p class="pup-number">#${playerObj.id}</p>
       </div>
       <p>Team: ${playerObj.team ? playerObj.team.name : 'Unassigned'}</p>
+      <p>Teammates:</p>
+      ${teammates}
       <p>Breed: ${playerObj.breed}</p>
+      <div id="changeplayer">
+      <form>
+      <label for="team">Choose a team:</label>
+      <select name="team"> id="teamselect">
+      <option value="277">Ruff</option>
+
+      </select>
+     
+      
+      </form>
+      <button id="changeteam">Change Team</button>
+      </div>
       <img src="${playerObj.imageUrl}" alt="photo of ${
     playerObj.name
   } the puppy">
+  
       <button id="see-all">Back to all players</button>
+      
     </div>
+    
+    
   `;
 
   playerContainer.innerHTML = pupHTML;
-
+  
+  
       
 };
+
+const valueGet = () => {
+  let form = document.querySelector('#changeteam');
+  let button = document.getElementById('changeteam');
+  let value = form.value;
+  button.addEventListener('click', async (event) => {
+   event.preventDefault();
+   console.log(value);
+
+   //const player = await fetchSinglePlayer(playerObj.id);
+   // await renderSinglePlayer(player);
+  })
+}
+
+//export const changeTeam = (id, teamid) => {
+//  let playerData = {
+ //   teamId: teamid
+ // }
+//}
+
+
 
 export const renderNewPlayerForm = () => {
   let formHTML = `

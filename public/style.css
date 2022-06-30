@@ -1,3 +1,7 @@
+body {
+  background-color: lightgray;
+}
+
 #all-players-container {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +15,7 @@
   margin: 5px 10px;
   padding: 10px;
   border-radius: 10px;
+  background-color: white;
 
   display: flex;
   flex-direction: column;
@@ -47,6 +52,7 @@
   margin: 5px 10px;
   padding: 10px;
   border-radius: 10px;
+  background-color: white;
 
   display: flex;
   flex-direction: column;
@@ -54,4 +60,39 @@
 
 .single-player-view > p {
   margin: 10px 0px 0px 0px;
+}
+
+.single-player-view > button{
+  background-color:darkslateblue;
+  color: white;
+  margin-bottom: 5px;
+  border: none;
+  border-left: solid black;
+}
+form {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+
+form > button {
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+  border: none;
+  box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.remove-button {
+  background-color:brown;
+  color: white;
+  border: none;
+  border-left: solid black;
+}
+
+.detail-button{
+  background-color: darkgreen;
+  color: white;
+  margin-bottom: 5px;
+  border: none;
+  border-left: solid black;
 }
