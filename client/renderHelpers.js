@@ -127,16 +127,16 @@ export const renderSinglePlayer = (playerObj) => {
 };
 
 const valueGet = () => {
-  let form = document.querySelector('#changeteam');
-  let button = document.getElementById('changeteam');
-  let value = form.value;
-  button.addEventListener('click', async (event) => {
-   event.preventDefault();
-   console.log(value);
+  // let form = document.querySelector('#changeteam');
+  // let button = document.getElementById('changeteam');
+  // let value = form.value;
+  // button.addEventListener('click', async (event) => {
+  //  event.preventDefault();
+  //  console.log(value);
 
    //const player = await fetchSinglePlayer(playerObj.id);
    // await renderSinglePlayer(player);
-  })
+  // })
 }
 
 //export const changeTeam = (id, teamid) => {

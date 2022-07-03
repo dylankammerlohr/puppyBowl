@@ -1,5 +1,5 @@
 body {
-  background-color: lightgray;
+  background-color: #C9CFCA;
 }
 
 #all-players-container {
@@ -16,9 +16,9 @@ body {
   padding: 10px;
   border-radius: 10px;
   background-color: white;
-
   display: flex;
   flex-direction: column;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .single-player-card img, .single-player-view img {
@@ -32,18 +32,21 @@ body {
   justify-content: space-between;
   align-items: center;
   line-height: 10px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
 }
 
 .header-info > p {
-  margin: 5px;
+  margin: 10px;
 }
 
 .pup-title {
-  font-size: x-large;
+  font-size: 40px;
 }
 
 .pup-number {
   font-style: italic;
+  font-size: 25px;
 }
 
 .single-player-view {
@@ -53,46 +56,57 @@ body {
   padding: 10px;
   border-radius: 10px;
   background-color: white;
-
   display: flex;
   flex-direction: column;
 }
 
 .single-player-view > p {
   margin: 10px 0px 0px 0px;
-}
-
-.single-player-view > button{
-  background-color:darkslateblue;
-  color: white;
-  margin-bottom: 5px;
-  border: none;
-  border-left: solid black;
-}
-form {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 22px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 form > button {
-  background-color: blue;
-  color: white;
-  font-size: 18px;
-  border: none;
-  box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color:rgb(253, 180, 76);
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.remove-button {
-  background-color:brown;
-  color: white;
-  border: none;
-  border-left: solid black;
+#new-player-form {
+  margin-bottom: 15px;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.detail-button{
-  background-color: darkgreen;
-  color: white;
-  margin-bottom: 5px;
-  border: none;
-  border-left: solid black;
+.detail-button, 
+.remove-button{
+  font-family: 'Quicksand', sans-serif;
+  margin: 4px;
+  /* background-color: rgb(201, 183, 156); */
+}
+
+/* #single-player-card > button {
+  margin: 5px;
+} */
+
+#see-all {
+  font-family: 'Quicksand', sans-serif;
+}
+
+#changeplayer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  padding-right: 10px;
+  font-family: 'Quicksand', sans-serif;
+  
+}
+
+#changeteam {
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 10px;
+
+}
+
+form > select {
+  font-family: 'Quicksand', sans-serif;
 }
