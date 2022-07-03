@@ -125,7 +125,7 @@ export const renderSinglePlayer = (playerObj) => {
   
       
 };
-
+// change team button does not work
 const valueGet = () => {
   // let form = document.querySelector('#changeteam');
   // let button = document.getElementById('changeteam');
